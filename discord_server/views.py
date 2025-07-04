@@ -7,6 +7,7 @@ def home(request):
     """
     context = {
         'server_name': 'MEGA TEAM',
+        'timestamp': int(time.time()),
         'main_games': ['CS2', 'DOTA 2'],
         'discord_invite': 'https://discord.gg/g8UBrgm8',  # Replace with actual Discord invite link
         'page_title': 'MEGA TEAM - Discord Serveri',
