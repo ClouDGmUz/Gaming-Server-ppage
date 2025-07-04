@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="logo-container">
+            <div class="logo-glow"></div>
+            <h1 class="server-title">
+                <span class="mega">MEGA</span>
+                <span class="team">TEAM</span>
+            </h1>
+        </div>
+        
+        <p class="hero-subtitle">{{ hero_subtitle }}</p>
+        <p class="hero-description">{{ hero_description }}</p>
+        
+        <div class="cta-buttons">
+            <a href="{{ discord_invite }}" class="btn btn-primary">
+                <i class="fab fa-discord"></i>
+                {{ join_discord }}
+            </a>
+            <a href="#games" class="btn btn-secondary">
+                <i class="fas fa-gamepad"></i>
+                {{ our_games }}
+            </a>
+        </div>
+    </div>
+    
+    <!-- Floating elements -->
+    <div class="floating-elements">
+        <div class="floating-icon floating-icon-1"><i class="fas fa-crosshairs"></i></div>
+        <div class="floating-icon floating-icon-2"><i class="fas fa-shield-alt"></i></div>
+        <div class="floating-icon floating-icon-3"><i class="fas fa-bolt"></i></div>
+    </div>
+</section>
+
+<!-- Games Section -->
+<section id="games" class="games-section">
+    <div class="container">
+        <h2 class="section-title">
+            <span class="title-glow">{{ featured_games }}</span>
+        </h2>
+        
+        <div class="games-grid">
+            <!-- CS2 Card -->
+            <div class="game-card cs2-card">
+                <div class="game-card-inner">
+                    <div class="game-icon">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <h3 class="game-title">Counter-Strike 2</h3>
+                    <p class="game-description">{{ cs2_description }}</p>
+                    <div class="game-stats">
+                        <div class="stat">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">{{ active_players }}</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">{{ servers }}</span>
+                        </div>
+                    </div>
+                    <div class="game-features">
+                        <span class="feature">{{ competitive_matches }}</span>
+                        <span class="feature">{{ training_sessions }}</span>
+                        <span class="feature">{{ team_formation }}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DOTA 2 Card -->
+            <div class="game-card dota2-card">
+                <div class="game-card-inner">
+                    <div class="game-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="game-title">DOTA 2</h3>
+                    <p class="game-description">{{ dota2_description }}</p>
+                    <div class="game-stats">
+                        <div class="stat">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">{{ active_players }}</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">{{ daily }}</span>
+                            <span class="stat-label">{{ tournaments }}</span>
+                        </div>
+                    </div>
+                    <div class="game-features">
+                        <span class="feature">{{ ranked_parties }}</span>
+                        <span class="feature">{{ strategy_coaching }}</span>
+                        <span class="feature">{{ tournament_play }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="container">
+        <h2 class="section-title">
+            <span class="title-glow">{{ why_choose }}</span>
+        </h2>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>{{ active_community }}</h3>
+                <p>{{ active_community_desc }}</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>{{ competitive_play }}</h3>
+                <p>{{ competitive_play_desc }}</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>{{ support_24_7 }}</h3>
+                <p>{{ support_24_7_desc }}</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>{{ skill_development }}</h3>
+                <p>{{ skill_development_desc }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number" data-target="2500">0</div>
+                <div class="stat-label">{{ members }}</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-label">{{ tournaments }}</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="24">0</div>
+                <div class="stat-label">{{ hours_active }}</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="99">0</div>
+                <div class="stat-label">% {{ uptime }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>{{ ready_to_join }}</h2>
+            <p>{{ connect_gamers }}</p>
+            <a href="{{ discord_invite }}" class="btn btn-primary btn-large">
+                <i class="fab fa-discord"></i>
+                {{ join_mega_team }}
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
